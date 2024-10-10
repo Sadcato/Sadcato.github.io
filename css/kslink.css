@@ -1,0 +1,75 @@
+/* ����������ť */
+/* ������д��ʽ */
+.addBtn {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.addBtn button {
+    transition: .2s;
+    display: flex;
+    margin: 5px auto;
+    color: var(--global-bg);
+    padding: 15px;
+    border-radius: 40px;
+    background: var(--search-result-title);
+    align-items: center;
+}
+
+button {
+    padding: 0;
+    outline: 0;
+    border: none;
+    background: 0 0;
+    cursor: pointer;
+    touch-action: manipulation;
+}
+.fa-solid, .fas {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+.addBtn i {
+    font-size: 1.3rem;
+    margin-right: 10px;
+}
+.addBtn button:hover {
+    background: var(--theme-color);
+    color: #fff;
+}
+
+/* ���е�CSS���ֲ��� */
+
+/* �����µ���ʽ */
+#friend-link-container {
+    margin-bottom: 20px;
+}
+
+#friend-link-container div {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+#link-form {
+    margin-top: 20px;
+}
+
+#link-form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* �޸��ύ��ť����ʽ */
+#link-form button {
+    padding: 10px 20px;
+    background-color: var(--theme-color);
+    color: #000; /* ����ɫ�� #fff ��Ϊ #000 */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#link-form button:hover {
+    opacity: 0.8;
+}
