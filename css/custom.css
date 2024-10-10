@@ -1,4 +1,4 @@
-/* 页脚与头图透明 */
+/* é¡µè„šä¸Žå¤´å›¾é€æ˜Ž */
 #footer {
   background: transparent !important;
 }
@@ -6,7 +6,7 @@
   background: transparent !important;
 }
 
-/* 白天模式遮罩透明 */
+/* ç™½å¤©æ¨¡å¼é®ç½©é€æ˜Ž */
 #footer::before {
   background: transparent !important;
 }
@@ -14,7 +14,7 @@
   background: transparent !important;
 }
 
-/* 夜间模式遮罩透明 */
+/* å¤œé—´æ¨¡å¼é®ç½©é€æ˜Ž */
 [data-theme="dark"] #footer::before {
   background: transparent !important;
 }
@@ -23,35 +23,44 @@
 }
 
 @font-face {
-  /* Ϊ���������ȡ����(����) */
+  /* ÎªÔØÈëµÄ×ÖÌåÈ¡Ãû×Ö(ËæÒâ) */
   font-family: 'YSHST';	
-  /* �����ļ���ַ(��Ի��߾���·��������) */
+  /* ×ÖÌåÎÄ¼þµØÖ·(Ïà¶Ô»òÕß¾ø¶ÔÂ·¾¶¶¼¿ÉÒÔ) */
   src: url(/font/YSHaoShenTi-2.ttf);
-  /* ����Ӵ���ʽ(�Ӵֶ���) */
+  /* ¶¨Òå¼Ó´ÖÑùÊ½(¼Ó´Ö¶àÉÙ) */
   font-weight: normal;
-  /* ����������ʽ(б��/��б��) */
+  /* ¶¨Òå×ÖÌåÑùÊ½(Ð±Ìå/·ÇÐ±Ìå) */
   font-style: normal;
-  /* ������ʾ��ʽ */
+  /* ¶¨ÒåÏÔÊ¾ÑùÊ½ */
   font-display: block;
 }
 
-/* һ���˵����� */
+/* 一级菜单居中横向排列 */
 #nav .menus_items {
-  position: absolute !important;
-  width: fit-content !important;
-  left: 50% !important;
-  transform: translateX(-50%) !important;
-}
-/* �Ӳ˵�����չʾ */
-#nav .menus_items .menus_item:hover .menus_item_child {
-  display: flex !important;
-}
-/* �����2�Ǵ����������ĵ�2��Ԫ�أ������Ӳ˵���Ԫ�أ����԰��Լ������޸� */
-.menus_items .menus_item:nth-child(2) .menus_item_child {
-  left: -125px;
+  display: flex;  /* 使用 flexbox 布局 */
+  justify-content: center;  /* 水平居中 */
+  align-items: center;  /* 垂直居中对齐 */
+  width: 100%;  /* 使菜单占满导航栏宽度 */
+  margin: 0 auto;  /* 水平居中 */
+  position: relative;  /* 保持相对定位 */
 }
 
-/* �����������Ϣ��Ƭ��̬����ɫ */
+/* 设置每个菜单项的样式 */
+#nav .menus_items .menus_item {
+  display: inline-block;  /* 每个菜单项水平排列 */
+  padding: 10px 20px;  /* 设置菜单项的间距，可以根据需要调整 */
+}
+
+/* 子菜单的布局 */
+#nav .menus_items .menus_item:hover .menus_item_child {
+  display: flex;  /* 悬停时显示子菜单，子菜单横向排列 */
+  flex-direction: column;  /* 子菜单垂直排列 */
+  position: absolute;
+  top: 100%;  /* 子菜单显示在主菜单下方 */
+  left: 0;  /* 调整对齐位置 */
+}
+
+/* ²à±ßÀ¸¸öÈËÐÅÏ¢¿¨Æ¬¶¯Ì¬½¥±äÉ« */
 #aside-content > .card-widget.card-info {
   background: linear-gradient(
     -45deg,
@@ -102,12 +111,12 @@
   }
 }
 
-/* ��ҹģʽ���� */
+/* ºÚÒ¹Ä£Ê½ÊÊÅä */
 [data-theme="dark"] #aside-content > .card-widget.card-info {
   background: #191919ee;
 }
 
-/* ������ϢFollow me��ť */
+/* ¸öÈËÐÅÏ¢Follow me°´Å¥ */
 #aside-content > .card-widget.card-info > #card-info-btn {
   background-color: #3eb8be;
   border-radius: 8px;
