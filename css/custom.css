@@ -341,8 +341,9 @@ h6::before {
   border-radius: 12px;
   overflow: hidden;
   position: relative;
-  height: 400px; /* 调整高度 */
+  height: 410px; /* 调整高度 */
   width: 100%;
+  text-align: center;
 }
 
 /* 背景图片 */
@@ -397,7 +398,7 @@ h6::before {
 #aside-content .card-info .card-info-data {
   display: flex;
   justify-content: space-around;
-  padding-top: 12px;
+  padding: 4px 0;
 }
 
 #aside-content .card-info .card-info-data .card-info-data-item {
@@ -410,7 +411,7 @@ h6::before {
   border-radius: 20px;
   color: #fff;
   padding: 8px 20px;
-  margin-top: 15px;
+  margin-top: 8px;
   display: inline-block;
 }
 
@@ -423,11 +424,11 @@ h6::before {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20px;
+  padding: 16px;
 }
 
 #aside-content .card-info .card-info-social-icons {
-  margin-top: 15px;
+  margin-top: 8px;
 }
 
 @font-face {
@@ -440,4 +441,26 @@ h6::before {
 
 body, #welcome-info {
   font-family: 'wzz', sans-serif !important;
+}
+
+.card-announcement .announcement_content p {
+  margin-bottom: 0.5em;
+}
+
+.card-announcement .item-headline i {
+  color: #695100 
+}
+
+#aside-content .card-info .author-info__name {
+  padding: 0;
+  text-align: center;
+}
+
+
+/* 调整作者名字的字体大小 */
+#aside-content .card-info .author-info__name {
+  font-size: 2rem; /* 你可以根据需要调整这个值 */
+  font-weight: 700; /* 增加字体粗细，900 是最粗的 */
+  color: #3eb8be; /* 保持现有的颜色 */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* 保持现有的文字阴影 */
 }
