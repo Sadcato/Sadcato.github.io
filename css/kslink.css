@@ -9,7 +9,7 @@
     transition: .2s;
     display: flex;
     margin: 5px auto;
-    color: var(--global-bg);
+    color: #000; /* ����ɫ�� var(--global-bg) ��Ϊ #000 */
     padding: 15px;
     border-radius: 40px;
     background: var(--search-result-title);
@@ -34,7 +34,7 @@ button {
 }
 .addBtn button:hover {
     background: var(--theme-color);
-    color: #fff;
+    color: #000; /* ����ͣʱ����ɫҲ��Ϊ��ɫ */
 }
 
 /* ���е�CSS���ֲ��� */
@@ -72,4 +72,37 @@ button {
 
 #link-form button:hover {
     opacity: 0.8;
+}
+
+/* ������ʽ */
+.friend-link-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.friend-link-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.friend-link-info {
+    flex: 1;
+}
+
+.friend-link-info a {
+    font-weight: bold;
+    color: var(--theme-color);
+    text-decoration: none;
+}
+
+.friend-link-info p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+    color: #666;
 }
