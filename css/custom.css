@@ -429,3 +429,15 @@ h6::before {
 #aside-content .card-info .card-info-social-icons {
   margin-top: 15px;
 }
+
+@font-face {
+  font-family: 'wzz';
+  src: url('/font/LXGWWenKai-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body, #welcome-info {
+  font-family: 'wzz', sans-serif !important;
+}

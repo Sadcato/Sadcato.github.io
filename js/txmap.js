@@ -222,4 +222,4 @@ function showWelcome() {
 }
 window.onload = showWelcome;
 // ���ʹ����pjax�ڼ����������д���
-document.addEventListener('pjax:complete', showWelcome);
+// document.addEventListener('pjax:complete', showWelcome);
