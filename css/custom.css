@@ -43,6 +43,7 @@ body, h1, h2, h3, h4, h5, h6, p, span {
   left: 50% !important;
   transform: translateX(-50%) !important;
   color:rgba(255, 255, 255, 0.88);
+  display: inline;
 }
 
 /* 子菜单横向展示 */
@@ -110,21 +111,93 @@ div#archive {
   border-radius: 20px;
 }
 
-/* 导航栏 */
-#nav {
-  background: rgba(255, 255, 255, 0.1) !important; /* 非常轻微的白色背景 */
-  backdrop-filter: blur(10px) !important; /* 增加模糊效果 */
-  -webkit-backdrop-filter: blur(10px) !important; /* 为 Safari 浏览器添加支持 */
-  border-bottom: none !important; /* 移除底部边框 */
-  box-shadow: none !important; /* 移除阴影 */
-  transition: background-color 0.3s ease-in-out;
+/* 首页全屏背景图 */
+#page-header {
+  position: relative;
+  height: 100vh !important;
+  background-attachment: fixed !important;
+  overflow: hidden;
 }
 
-/* 固定导航栏样式 */
-#page-header.nav-fixed #nav {
+/* 毛玻璃效果 */
+#page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  filter: blur(10px);
+  transform: scale(1.1); /* 稍微放大以覆盖边缘 */
+  z-index: -1;
+}
+
+/* 添加一个半透明的遮罩层 */
+#page-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+/* 确保内容在毛玻璃效果之上 */
+#page-header > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* 导航栏样式 */
+#nav {
+  position: fixed !important;
+  top: 10px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 50% !important;
+  z-index: 1000;
   background: rgba(255, 255, 255, 0.1) !important;
   backdrop-filter: blur(10px) !important;
   -webkit-backdrop-filter: blur(10px) !important;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+/* 确保导航栏在滚动时保持位置和样式 */
+#page-header.nav-fixed #nav,
+#page-header.nav-visible #nav {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 夜间模式下的导航栏样式 */
+[data-theme="dark"] #nav,
+[data-theme="dark"] #page-header.nav-fixed #nav,
+[data-theme="dark"] #page-header.nav-visible #nav {
+  background: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* 其他导航栏相关样式保持不变 */
+
+/* 调整网站标题样式 */
+#site-title,
+#site-subtitle {
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+/* 确保导航栏在滚动时保持位置 */
+#page-header.nav-fixed #nav,
+#page-header.nav-visible #nav {
+  top: 20px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
 }
 
 /* 导航栏文字样式 */
@@ -134,9 +207,10 @@ div#archive {
 #nav .site-page,
 #nav .menus_items .menus_item,
 #search-button {
-  color: rgba(255, 255, 255, 0.8) !important; /* 略微透明的白色文字 */
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* 添加轻微文字阴影以增加可读性 */
+  color: rgba(255, 255, 255, 0.8) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   transition: color 0.3s ease-in-out;
+  font-size: 0.9em;
 }
 
 /* 悬停效果 */
@@ -146,171 +220,63 @@ div#archive {
 #nav .site-page:hover,
 #nav .menus_items .menus_item:hover,
 #search-button:hover {
-  color: #ffffff !important; /* 悬停时变为纯白色 */
+  color: #ffffff !important;
 }
 
 /* 子菜单样式 */
 #nav .menus_items .menus_item .menus_item_child {
-  background-color: rgba(255, 255, 255, 0.1) !important;
-  backdrop-filter: blur(10px) !important;
-  -webkit-backdrop-filter: blur(10px) !important;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 100%;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin-top: 10px;
+  display: none;
 }
 
-#nav .menus_items .menus_item .menus_item_child li a {
-  color: rgba(255, 255, 255, 0.8) !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+#nav .menus_items .menus_item:hover .menus_item_child {
+  display: block;
 }
 
-#nav .menus_items .menus_item .menus_item_child li a:hover {
-  color: #ffffff !important;
-  background-color: rgba(255, 255, 255, 0.2);
+/* 搜索按钮样式 */
+#nav #search-button {
+  padding: 0 10px;
 }
 
-/* 夜间模式导航栏 */
-[data-theme="dark"] #page-header.nav-fixed #nav {
-  background: rgba(0, 0, 0, 0.7) !important;
-}
-
-/* 夜间模式遮罩 */
-[data-theme="dark"] #recent-posts > .recent-post-item,
-[data-theme="dark"] #aside-content .card-widget,
-[data-theme="dark"] div#post,
-[data-theme="dark"] div#archive,
-[data-theme="dark"] div#page {
-  background: var(--trans-dark);
-}
-
-/* 夜间模式页脚页头遮罩透明 */
-[data-theme="dark"] #footer::before {
-  background: transparent !important;
-}
-[data-theme="dark"] #page-header::before {
-  background: transparent !important;
-}
-
-/* 阅读模式 */
-.read-mode #aside-content .card-widget {
-  background: rgba(158, 204, 171, 0.5) !important;
-}
-.read-mode div#post {
-  background: rgba(158, 204, 171, 0.5) !important;
-}
-
-/* 夜间模式下的阅读模式 */
-[data-theme="dark"] .read-mode #aside-content .card-widget {
-  background: rgba(25, 25, 25, 0.9) !important;
-  color: #ffffff;
-}
-[data-theme="dark"] .read-mode div#post {
-  background: rgba(25, 25, 25, 0.9) !important;
-  color: #ffffff;
-}
-
-/* 文章页H1-H6图标样式效果 */
-/* 控制风车转动速度 */
-h1::before,
-h2::before,
-h3::before,
-h4::before,
-h5::before,
-h6::before {
-  -webkit-animation: ccc 4s linear infinite;
-  animation: ccc 4s linear infinite;
-}
-
-/* 控制风车转动方向 */
-@-webkit-keyframes ccc {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+/* 响应式调整 */
+@media screen and (max-width: 768px) {
+  .nav-container {
+    width: 90%;
+    padding: 5px 10px;
   }
-  to {
-    -webkit-transform: rotate(-1turn);
-    transform: rotate(-1turn);
+
+  #nav .menus_items {
+    justify-content: space-around;
   }
-}
-@keyframes ccc {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  to {
-    -webkit-transform: rotate(-1turn);
-    transform: rotate(-1turn);
+
+  #nav .menus_items .menus_item {
+    padding: 5px;
   }
 }
 
-/* 设置风车颜色 */
-#content-inner.layout h1::before {
-  color: #ef50a8;
-  margin-left: -1.55rem;
-  font-size: 1.3rem;
-  margin-top: -0.23rem;
-}
-#content-inner.layout h2::before {
-  color: #fb7061;
-  margin-left: -1.35rem;
-  font-size: 1.1rem;
-  margin-top: -0.12rem;
-}
-#content-inner.layout h3::before {
-  color: #ffbf00;
-  margin-left: -1.22rem;
-  font-size: 0.95rem;
-  margin-top: -0.09rem;
-}
-#content-inner.layout h4::before {
-  color: #a9e000;
-  margin-left: -1.05rem;
-  font-size: 0.8rem;
-  margin-top: -0.09rem;
-}
-#content-inner.layout h5::before {
-  color: #57c850;
-  margin-left: -0.9rem;
-  font-size: 0.7rem;
-  margin-top: 0rem;
-}
-#content-inner.layout h6::before {
-  color: #5ec1e0;
-  margin-left: -0.9rem;
-  font-size: 0.66rem;
-  margin-top: 0rem;
+/* 确保内容不被导航栏遮挡 */
+#content-inner {
+  margin-top: 80px; /* 根据导航栏高度调整 */
 }
 
-/* 标题hover效果 */
-#content-inner.layout h1:hover,
-#content-inner.layout h2:hover,
-#content-inner.layout h3:hover,
-#content-inner.layout h4:hover,
-#content-inner.layout h5:hover,
-#content-inner.layout h6:hover {
-  color: var(--theme-color);
-}
-#content-inner.layout h1:hover::before,
-#content-inner.layout h2:hover::before,
-#content-inner.layout h3:hover::before,
-#content-inner.layout h4:hover::before,
-#content-inner.layout h5:hover::before,
-#content-inner.layout h6:hover::before {
-  color: var(--theme-color);
-  -webkit-animation: ccc 6s linear infinite;
-  animation: ccc 6s linear infinite;
+/* 首页全屏背景图 */
+#page-header {
+  height: 100vh !important;
+  background-attachment: fixed !important;
+  position: relative;
 }
 
-/* 欢迎信息 */
-#welcome-info {
-  background: linear-gradient(45deg, #b9f4f3, #e3fbf9);
-  border-radius: 18px;
-  padding: 8px;
-}
-[data-theme="dark"] #welcome-info {
-  background: #212121;
-}
-
-/* 个人信息卡片状态 */
 .card-info-avatar .author-status-box {
   position: absolute;
   bottom: 0;
@@ -361,265 +327,62 @@ h6::before {
   position: relative;
 }
 
-/* 云朵遮罩 */
-.cloud-mask {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.cloud-mask::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0.2) 20%,
-    rgba(255, 255, 255, 0.4) 40%,
-    rgba(255, 255, 255, 0.6) 60%,
-    rgba(255, 255, 255, 0.8) 80%,
-    rgba(255, 255, 255, 1) 100%
-  );
-  pointer-events: none; /* 确保遮罩不会影响图片的交互 */
-}
-
 /* 个人信息卡片样式 */
 #aside-content .card-info {
-  background: var(--card-bg);
-  box-shadow: var(--card-box-shadow);
-  border-radius: 12px;
-  overflow: hidden;
   position: relative;
-  height: 410px; /* 调整高度 */
-  width: 100%;
-  text-align: center;
+  overflow: hidden;
 }
 
-#page-header.nav-fixed #nav #blog-info {
-  color: rgba(255, 255, 255, 0.88) !important;
-}
-
-/* 背景图片 */
-#aside-content .card-info::before {
+/* 白天模式下的渐变蒙版 */
+[data-theme="light"] #aside-content .card-info::after {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('/img/auth-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  border-radius: 12px;
-  z-index: 0;
+  background: linear-gradient(to bottom, 
+              rgba(255,255,255,0) 0%,
+              rgba(255,255,255,0.3) 30%,
+              rgba(255,255,255,0.6) 60%,
+              rgba(255,255,255,0.9) 100%);
+  pointer-events: none;
 }
 
-/* 白色渐变蒙版 */
-#aside-content .card-info::after {
+/* 夜间模式下的渐变蒙版 */
+[data-theme="dark"] #aside-content .card-info::after {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to top, 
-              rgba(255,255,255,1) 0%,
-              rgba(255,255,255,0.8) 50%,
-              rgba(255,255,255,0.4) 100%);
-  z-index: 1;
-  border-radius: 12px;
+  background: linear-gradient(to bottom, 
+              rgba(0,0,0,0) 0%,
+              rgba(0,0,0,0.3) 30%,
+              rgba(0,0,0,0.6) 60%,
+              rgba(0,0,0,0.9) 100%);
+  pointer-events: none;
 }
 
+/* 确保卡片内容在蒙版之上 */
 #aside-content .card-info > * {
   position: relative;
-  z-index: 2;
-}
-
-/* 调整内容布局 */
-#aside-content .card-info .card-info-avatar {
-  margin-top: 20px;
-  width: 110px;
-  height: 110px;
-}
-
-#aside-content .card-info .author-info__name,
-#aside-content .card-info .author-info__description {
-  color: #333;
-  text-shadow: 0 0 3px rgba(255,255,255,0.7);
-}
-
-#aside-content .card-info .card-info-data {
-  display: flex;
-  justify-content: space-around;
-  padding: 4px 0;
-}
-
-#aside-content .card-info .card-info-data .card-info-data-item {
-  color: #333;
-}
-
-/* 前往小家按钮样式 */
-#aside-content > .card-widget.card-info > #card-info-btn {
-  background-color: #3eb8be;
-  border-radius: 20px;
-  color: #fff;
-  padding: 8px 20px;
-  margin-top: 8px;
-  display: inline-block;
-}
-
-#aside-content > .card-widget.card-info > #card-info-btn:hover {
-  background-color: #49c5ca;
-}
-
-/* 调整卡片内容的整体布局 */
-#aside-content .card-info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 16px;
-}
-
-#aside-content .card-info .card-info-social-icons {
-  margin-top: 8px;
-}
-
-@font-face {
-  font-family: 'wzz';
-  src: url('/font/LXGWWenKai-Light.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-body, #welcome-info {
-  font-family: 'wzz', sans-serif !important;
-}
-
-.card-announcement .announcement_content p {
-  margin-bottom: 0.5em;
-}
-
-.card-announcement .item-headline i {
-  color: #695100 
-}
-
-#aside-content .card-info .author-info__name {
-  padding: 0;
-  text-align: center;
-}
-
-
-/* 调整作者名字的字体大小 */
-#aside-content .card-info .author-info__name {
-  font-size: 2rem; /* 你可以根据需要调整这个值 */
-  font-weight: 700; /* 增加字体粗细，900 是最粗的 */
-  color: #3eb8be; /* 保持现有的颜色 */
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* 保持现有的文字阴影 */
-}
-
-/* 首页全屏背景图 */
-#page-header {
-  height: 100vh !important;
-  background-attachment: fixed !important;
-  position: relative;
-}
-
-
-/* 添加一个半透明的遮罩层 */
-#page-header::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.3);
-  z-index: -1;
-  backdrop-filter: blur(12px);
-}
-
-/* 确保内容在毛玻璃效果之上 */
-#page-header > * {
-  position: relative;
   z-index: 1;
 }
 
-/* 隐藏首页文章列表和侧边栏,直到滚动 */
-.home-content {
-  margin-top: 100vh;
+/* 调整卡片内容的颜色，确保在蒙版上可见 */
+[data-theme="light"] #aside-content .card-info {
+  color: #333;
 }
 
-#recent-posts,
-#aside-content {
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-
-/* 当页面滚动时显示内容 */
-.show-content #recent-posts,
-.show-content #aside-content {
-  opacity: 1;
-}
-
-/* 调整网站标题样式 */
-#site-title {
-  font-size: 2.5rem;
-  color: white/rgba(255, 255, 255, 0.8);
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-}
-
-#site-subtitle {
-  font-size: 1.5rem;
-  color: white/rgba(255, 255, 255, 0.8);
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-}
-
-#nav-site-title {
-  color: white/rgba(255, 255, 255, 0.8);
-}
-
-#site-name {
-  color: white/rgba(255, 255, 255, 0.8);
-}
-
-#search-button {
-  color: white/rgba(255, 255, 255, 0.8);
-}
-
-/* 调整导航栏样式 */
-#nav a {
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-  color: white/rgba(255, 255, 255, 0.8);
-}
-
-/* 滚动指示器样式 */
-#scroll-down {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+[data-theme="dark"] #aside-content .card-info {
   color: #fff;
-  font-size: 2rem;
-  cursor: pointer;
-  animation: bounce 2s infinite;
-  z-index: 10; /* 确保指示器在其他元素之上 */
 }
 
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateX(-50%) translateY(0);
-  }
-  40% {
-    transform: translateX(-50%) translateY(-30px);
-  }
-  60% {
-    transform: translateX(-50%) translateY(-15px);
-  }
+/* 夜间模式下的导航栏样式（如果需要） */
+[data-theme="dark"] #nav,
+[data-theme="dark"] #page-header.nav-fixed #nav,
+[data-theme="dark"] #page-header.nav-visible #nav {
+  background: rgba(0, 0, 0, 0.7) !important; /* 或者您想要的夜间模式颜色 */
 }
-
-/* 其他现有的样式保持不变 */
