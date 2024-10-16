@@ -39,7 +39,7 @@ body, h1, h2, h3, h4, h5, h6, p, span {
 /* 一级菜单居中 */
 #nav .menus_items {
   position: absolute !important;
-  width: fit-content !important;
+  width: 510px !important;
   left: 50% !important;
   transform: translateX(-50%) !important;
   color:rgba(255, 255, 255, 0.88);
@@ -210,7 +210,7 @@ div#archive {
   color: rgba(255, 255, 255, 0.8) !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   transition: color 0.3s ease-in-out;
-  font-size: 1.0em !important;
+  font-size: 0.9em !important;
 }
 
 /* 悬停效果 */
