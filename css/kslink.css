@@ -17,14 +17,7 @@
 }
 
 
-button {
-    padding: 0;
-    outline: 0;
-    border: none;
-    background: 0 0;
-    cursor: pointer;
-    touch-action: manipulation;
-}
+
 .fa-solid, .fas {
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
@@ -61,15 +54,6 @@ button {
     margin-bottom: 10px;
 }
 
-/* �޸��ύ��ť����ʽ */
-#link-form button {
-    padding: 10px 20px;
-    background-color: var(--theme-color);
-    color: #000; /* ����ɫ�� #fff ��Ϊ #000 */
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
 #link-form button:hover {
     opacity: 0.8;
@@ -112,8 +96,8 @@ button {
 .flink-desc {
     text-align: center;
     margin: 20px 0;
-    font-size: 16px;
-    color: #666;
+    font-size: 20px;
+    color: #000000;
     line-height: 1.6;
   }
   
