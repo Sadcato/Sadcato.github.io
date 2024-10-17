@@ -107,3 +107,13 @@ button {
     font-size: 0.9em;
     color: #666;
 }
+
+
+.flink-desc {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+  }
+  
