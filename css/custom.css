@@ -230,7 +230,7 @@ div#archive {
   left: 50%;
   transform: translateX(-50%);
   min-width: 100%;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(225, 225, 225, 0.1); /* 修改这里 */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 15px;
@@ -242,6 +242,16 @@ div#archive {
 
 #nav .menus_items .menus_item:hover .menus_item_child {
   display: block;
+}
+
+#nav .menus_items .menus_item .menus_item_child li a {
+  color: rgba(255, 255, 255, 0.9) !important; /* 增加文字对比度 */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#nav .menus_items .menus_item .menus_item_child li a:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* 搜索按钮样式 */
@@ -385,4 +395,13 @@ div#archive {
 [data-theme="dark"] #page-header.nav-fixed #nav,
 [data-theme="dark"] #page-header.nav-visible #nav {
   background: rgba(0, 0, 0, 0.7) !important; /* 或者您想要的夜间模式颜色 */
+}
+
+#scroll-down {
+  cursor: pointer;
+  transition: all 0.3s ease !important;
+}
+
+#scroll-down:hover {
+  transform: translateY(5px) !important;
 }
