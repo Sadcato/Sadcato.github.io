@@ -1,0 +1,103 @@
+/* ����������ť */
+/* ������д��ʽ */
+.addBtn {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.addBtn button {
+    transition: .2s;
+    display: flex;
+    margin: 5px auto;
+    color: #000; /* ����ɫ�� var(--global-bg) ��Ϊ #000 */
+    padding: 15px;
+    border-radius: 40px;
+    background: var(--search-result-title);
+    align-items: center;
+}
+
+
+
+.fa-solid, .fas {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+.addBtn i {
+    font-size: 1.3rem;
+    margin-right: 10px;
+}
+.addBtn button:hover {
+    background: var(--theme-color);
+    color: #000; /* ����ͣʱ����ɫҲ��Ϊ��ɫ */
+}
+
+/* ���е�CSS���ֲ��� */
+
+/* �����µ���ʽ */
+#friend-link-container {
+    margin-bottom: 20px;
+}
+
+#friend-link-container div {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+#link-form {
+    margin-top: 20px;
+}
+
+#link-form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+#link-form button:hover {
+    opacity: 0.8;
+}
+
+/* ������ʽ */
+.friend-link-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+.friend-link-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.friend-link-info {
+    flex: 1;
+}
+
+.friend-link-info a {
+    font-weight: bold;
+    color: var(--theme-color);
+    text-decoration: none;
+}
+
+.friend-link-info p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+
+.flink-desc {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 20px;
+    color: #000000;
+    line-height: 1.6;
+  }
+  

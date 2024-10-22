@@ -1,0 +1,270 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>不只游戏 | Cato's blog</title><meta name="author" content="Cato"><meta name="copyright" content="Cato"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="如果不想死后就被忘记，要么写点值得读的东西，要么做点值得写的事情说来惭愧，这篇文章诞生的原因是因为摸鱼打游戏hhh，在游玩Minecraft，也就是《我的世界》这款游戏的时候，那天我像往常一样打开存档，试了试传送到传说中的“终末之地”（其实就是太远了，大概在3000万格的距离，设备加载出乱码了）一样望去只有一片混沌和错误，就好像来到了一片禁忌之地，而我就是那个界外者hhhhh，过了一会儿我发现只移">
+<meta property="og:type" content="article">
+<meta property="og:title" content="不只游戏">
+<meta property="og:url" content="https://sadcato.sbs/2024/10/22/%E4%B8%8D%E5%8F%AA%E6%B8%B8%E6%88%8F/index.html">
+<meta property="og:site_name" content="Cato&#39;s blog">
+<meta property="og:description" content="如果不想死后就被忘记，要么写点值得读的东西，要么做点值得写的事情说来惭愧，这篇文章诞生的原因是因为摸鱼打游戏hhh，在游玩Minecraft，也就是《我的世界》这款游戏的时候，那天我像往常一样打开存档，试了试传送到传说中的“终末之地”（其实就是太远了，大概在3000万格的距离，设备加载出乱码了）一样望去只有一片混沌和错误，就好像来到了一片禁忌之地，而我就是那个界外者hhhhh，过了一会儿我发现只移">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://sadcato.sbs/img/notjustgame.jpg">
+<meta property="article:published_time" content="2024-10-22T11:45:54.018Z">
+<meta property="article:modified_time" content="2024-10-22T09:23:11.191Z">
+<meta property="article:author" content="Cato">
+<meta property="article:tag" content="碎碎念">
+<meta property="article:tag" content="手记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://sadcato.sbs/img/notjustgame.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://sadcato.sbs/2024/10/22/%E4%B8%8D%E5%8F%AA%E6%B8%B8%E6%88%8F/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        if (name && globalFn[key][name]) return
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><link rel="stylesheet" href="/font/LXGWWenKai-Light.ttf" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Cato","link":"链接: ","source":"来源: Cato's blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '不只游戏',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-10-22 17:23:11'
+}</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><meta name="generator" content="Hexo 7.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+  const $loadingBox = document.getElementById('loading-box')
+  const $body = document.body
+  const preloader = {
+    endLoading: () => {
+      $body.style.overflow = ''
+      $loadingBox.classList.add('loaded')
+    },
+    initLoading: () => {
+      $body.style.overflow = 'hidden'
+      $loadingBox.classList.remove('loaded')
+    }
+  }
+
+  preloader.initLoading()
+  window.addEventListener('load', preloader.endLoading)
+
+  if (true) {
+    btf.addGlobalFn('pjaxSend', preloader.initLoading, 'preloader_init')
+    btf.addGlobalFn('pjaxComplete', preloader.endLoading, 'preloader_end')
+  }
+})()</script><div id="web_bg" style="background-image: url(/img/bg.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/assets/head.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-file-alt"></i><span> 文稿</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-camera"></i><span> 拾光</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/images/"><i class="fa-fw fas fa-image"></i><span> 图册</span></a></li><li><a class="site-page child" href="/comments/"><i class="fa-fw fas fa-envelope-open"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友人帐</span></a></div><div class="menus_item"><a class="site-page" href="/aboutME/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(img/notjustgame.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"></a><a class="nav-page-title" href="/"><span class="site-name">不只游戏</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-file-alt"></i><span> 文稿</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li></ul></div><div class="menus_item"><span class="site-page group"><i class="fa-fw fas fa-camera"></i><span> 拾光</span><i class="fas fa-chevron-down"></i></span><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li><li><a class="site-page child" href="/images/"><i class="fa-fw fas fa-image"></i><span> 图册</span></a></li><li><a class="site-page child" href="/comments/"><i class="fa-fw fas fa-envelope-open"></i><span> 留言板</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友人帐</span></a></div><div class="menus_item"><a class="site-page" href="/aboutME/"><i class="fa-fw fas fa-user"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">不只游戏</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-10-22T11:45:54.018Z" title="发表于 2024-10-22 19:45:54">2024-10-22</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-10-22T09:23:11.191Z" title="更新于 2024-10-22 17:23:11">2024-10-22</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%89%8B%E8%AE%B0/">手记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">1.7k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="如果不想死后就被忘记，要么写点值得读的东西，要么做点值得写的事情"><a href="#如果不想死后就被忘记，要么写点值得读的东西，要么做点值得写的事情" class="headerlink" title="如果不想死后就被忘记，要么写点值得读的东西，要么做点值得写的事情"></a>如果不想死后就被忘记，要么写点值得读的东西，要么做点值得写的事情</h1><p>说来惭愧，这篇文章诞生的原因是因为摸鱼打游戏hhh，在游玩Minecraft，也就是《我的世界》这款游戏的时候，那天我像往常一样打开存档，试了试传送到传说中的“终末之地”（其实就是太远了，大概在3000万格的距离，设备加载出乱码了）一样望去只有一片混沌和错误，就好像来到了一片禁忌之地，而我就是那个界外者hhhhh，过了一会儿我发现只移动摇杆的话确实是无法移动的，随后我就想，“那就去世界原点0，0，0看看吧！随后我就去找寻0，x，0的坐标，一路下挖，挖到了被岩石包围的世界原点，当我期待着是否会有什么稀奇的，充满冒险性的事物等着我的时候，我发现他只是被岩石包裹的的一个坐标罢了，世界原点没有诡异而神秘的生物，没有幽静而狭长的隧道，更没有雄伟而庄严的神殿，有的只有埋在土壤下的石头，石头，还是石头，这无疑给当时的我带来莫大的打击，甚至一度低落到饭都忘了吃，而我以为的冒险不过是想象的幻景罢了。</p>
+<p>随后我无助的靠在椅子上，想要明白我做这些事情的意义，去明白为什么我会为此感到失落，甚至我开始思考“价值”“意义”这些个词</p>
+<h2 id="Looking-for"><a href="#Looking-for" class="headerlink" title="Looking for"></a>Looking for</h2><p>我以为自己将迎来某个伟大的成就，以为会遇见某种伟大的事物，然而当我到达目的地时，发现眼前的景象不过是自己的投影，所谓的伟大只是普通而已，总希望找到某种深层次的意义，但往往，意义并不是来自于那些伟大的成就，而是它的存在本身就有了意义。</p>
+<p>当我去思考这样的结果是否对得起我一路的颠沛流离的时候，我同时也记起了我这一路所经历的冒险，那壮观的密林与高山，满山遍野的蓝色花海，连绵无际的冰川和结冰的海面，以及我在半路驯服的鹦鹉“咕咕”，我在这个世界留下足迹的同时也无时无刻的感叹这个像素世界的奇妙，多样的生物群系，植被，自然风光，他们并没有因为路途的遥远而被我遗忘，每翻过一个高山我都会期待着看到海洋，每踏上一片未知的海域我就会想象下一片大陆又是何种模样，这种伴随着对于未知的探索是我可能再难有如此经历。</p>
+<h2 id="伟大？"><a href="#伟大？" class="headerlink" title="伟大？"></a>伟大？</h2><p>无论对于人还是事物，其本身就已经很了不起了，不管你是否认识到这一点，不管别人是否认同。你的伟大并不因为你开发了一款iPhone应用、提前完成了学业或是买下了那艘心仪的游艇。那个原点的伟大不是拥有诡异而神秘的生物，幽长的隧道或是庄严的神殿，这些成就并不能定义什么是真正的伟大。</p>
+<p>你已经很伟大了，因为面对无尽的困惑和必然的死亡，你依然能够选择关注什么，忽略什么。这个简单的事实，你能选择你的价值观，这么简单的事情，已经足以使你富有，已经足以使你成功，已经足以使你被爱，即使你感觉不到。</p>
+<h2 id="死亡"><a href="#死亡" class="headerlink" title="死亡"></a>死亡</h2><p>没有人喜欢思考自己的死亡，但这样的思考却很有必要。事实上，思考死亡可能是我们能做的最重要的心理练习，原因在于：死亡是我们唯一能确定无疑的事情。因此，死亡必须成为我们用来定位所有其他价值观和决策的指南针。如果放任自流，我们将会沉迷于财富、名望和美貌，这些东西除了给我们带来巨大的压力和焦虑之外，几乎没有任何意义。如果不承认我们自己的死亡，我们会让肤浅的东西变得重要，重要的东西变得肤浅。</p>
+<p>查尔斯·布考斯基曾说过：“我们每个人最终都会离开这个世界，谁也逃不掉。人生如戏。这么简单的事实本该让我们更加珍惜彼此，但实际并非如此。生活中的小事让我们感到恐惧，压得我们喘不过气来。我们被无关紧要的事情蚕食着。”</p>
+<p>死亡提醒我们，不要被生活中的小事消耗，我们必须选择超越我们自身局限的价值观，因为这是通往幸福的不变法则。不管你听的是亚里士多德、孔子、哈佛的心理学家、耶稣基督，还是迪士尼公主的故事，他们的核心思想大同小异，真正的幸福源自于关注比个人更广阔的事物。这种感觉是我们去教堂寻求的，是我们参与战争、养育家庭、积蓄退休金、建设桥梁、创建初创企业的动力，就是为了那一刹那，感觉自己是广袤、神秘宇宙的一部分。</p>
+<h2 id="End？"><a href="#End？" class="headerlink" title="End？"></a>End？</h2><p>尽管你也终将迎来生命的死去，但这恰恰证明你有幸活过。即使你的存在在宇宙的广阔中显得微乎其微，但你的生命却能在宇宙的每一个角落产生回响，以最细微、最柔弱的方式回荡，留下你独一无二的痕迹。</p>
+<p>你不必伟大才有意义，你的价值也不在于是否被后人记住。就像那些曾经滋养我们祖先的树木，早已消逝在历史的长河中一样。我们同样会离开这个世界，被遗忘，但我们的生命力终将转化成新的、伟大的、虽不显赫但仍然重要的形态继续存在。</p>
+<p>因此，花费片刻时间，感激你这具鲜活的躯体，这个生命的奇迹吧</p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>在从原点出来后我在距离其200格左右的位置发现了一个残破的地狱门，所以请继续冒险吧少年！无论是在像素世界中还是真实世界中，都不要忘掉掉那启程时的那份热枕，去奋斗，去享受，<br>最后引入一位好友的话：</p>
+<p>为自己的人生干杯🍻</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://sadcato.sbs">Cato</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://sadcato.sbs/2024/10/22/%E4%B8%8D%E5%8F%AA%E6%B8%B8%E6%88%8F/">https://sadcato.sbs/2024/10/22/%E4%B8%8D%E5%8F%AA%E6%B8%B8%E6%88%8F/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://sadcato.sbs" target="_blank">Cato's blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/">碎碎念</a><a class="post-meta__tags" href="/tags/%E6%89%8B%E8%AE%B0/">手记</a></div><div class="post-share"><div class="social-share" data-image="/img/notjustgame.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="prev-post pull-left" href="/2024/10/22/%E4%BD%BF%E7%94%A8hexo+butterfly%E6%90%AD%E5%BB%BA%E4%B8%80%E4%B8%AAblog/" title="使用hexo+butterfly搭建一个blog"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">使用hexo+butterfly搭建一个blog</div></div></a><a class="next-post pull-right" href="/2024/10/22/%E4%B8%80%E6%AC%BE%E8%BD%BB%E9%87%8F%E7%9A%84VScode%E7%BF%BB%E8%AF%91%E6%8F%92%E4%BB%B6/" title="一款轻量的VScode翻译插件"><img class="cover" src="/img/code-trans.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">一款轻量的VScode翻译插件</div></div></a></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="card-info-avatar"><div class="avatar-img"><img src="/assets/head.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-status-box"><div class="author-status"><g-emoji class="g-emoji" alias="palm_tree" fallback-src="https://lskypro.acozycotage.net/LightPicture/2022/12/fe1dc0402e623096.jpg">🐟</g-emoji><span>认真摸鱼中</span></div></div></div><div class="author-info__name">Cato</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">11</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Sadcato"><i class="fab fa-github"></i><span>前往小窝...</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-mug-hot"> </i><span>公告</span></div><div class="announcement_content"><p>欢迎来到我的博客！</p><p>这里是我分享设计、科技和教育理念的空间</p><p>希望你能在这里找到启发和乐趣</p><p>期待你的交流与反馈</p><p>Ciallo~(∠・ω<)⌒☆</p><p></p></div><div id="welcome-info"></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E4%B8%8D%E6%83%B3%E6%AD%BB%E5%90%8E%E5%B0%B1%E8%A2%AB%E5%BF%98%E8%AE%B0%EF%BC%8C%E8%A6%81%E4%B9%88%E5%86%99%E7%82%B9%E5%80%BC%E5%BE%97%E8%AF%BB%E7%9A%84%E4%B8%9C%E8%A5%BF%EF%BC%8C%E8%A6%81%E4%B9%88%E5%81%9A%E7%82%B9%E5%80%BC%E5%BE%97%E5%86%99%E7%9A%84%E4%BA%8B%E6%83%85"><span class="toc-number">1.</span> <span class="toc-text">如果不想死后就被忘记，要么写点值得读的东西，要么做点值得写的事情</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Looking-for"><span class="toc-number">1.1.</span> <span class="toc-text">Looking for</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%9F%E5%A4%A7%EF%BC%9F"><span class="toc-number">1.2.</span> <span class="toc-text">伟大？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%AD%BB%E4%BA%A1"><span class="toc-number">1.3.</span> <span class="toc-text">死亡</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#End%EF%BC%9F"><span class="toc-number">1.4.</span> <span class="toc-text">End？</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8E%E8%AE%B0"><span class="toc-number">1.5.</span> <span class="toc-text">后记</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">I wish you to become your own sun, no need to rely on who's light.<p><a target="_blank" href="https://hexo.io/"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="鍗氬妗嗘灦涓篐exo"></a>&nbsp;<a target="_blank" href="https://butterfly.js.org/"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender" title="涓婚閲囩敤butterfly"></a>&nbsp;<a target="_blank" href="https://www.jsdelivr.com/"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="鏈珯浣跨敤JsDelivr涓洪潤鎬佽祫婧愭彁渚汣DN鍔犻€"></a> &nbsp;<a target="_blank" href="https://vercel.com/ "><img src="https://img.shields.io/badge/Hosted-Vervel-brightgreen?style=flat&logo=Vercel" title="鏈珯閲囩敤鍙岀嚎閮ㄧ讲锛岄粯璁ょ嚎璺墭绠′簬Vercel"></a>&nbsp;<a target="_blank" href="https://vercel.com/ "><img src="https://img.shields.io/badge/Hosted-Coding-0cedbe?style=flat&logo=Codio" title="鏈珯閲囩敤鍙岀嚎閮ㄧ讲锛岃仈閫氱嚎璺墭绠′簬Coding"></a>&nbsp;<a target="_blank" href="https://github.com/"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" title="鏈珯椤圭洰鐢盙tihub鎵樼"></a>&nbsp;<a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" title="鏈珯閲囩敤鐭ヨ瘑鍏变韩缃插悕-闈炲晢涓氭€т娇鐢-鐩稿悓鏂瑰紡鍏变韩4.0鍥介檯璁稿彲鍗忚杩涜璁稿彲"></a></p></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const initGitalk = () => {
+    const gitalk = new Gitalk(Object.assign({
+      clientID: 'Ov23lidEUHLAoEcL7E3Y',
+      clientSecret: 'abb8d79c3d13760cd04fbeae12a27d2e0a7aa578',
+      repo: 'Sadcato.github.io',
+      owner: 'Sadcato',
+      admin: ['Sadcato'],
+      id: '3ef958e19ac1b2fbe9f8f5fe435d4746',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  const loadGitalk = async() => {
+    if (typeof Gitalk === 'function') initGitalk()
+    else {
+      await btf.getCSS('https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css')
+      await btf.getScript('https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js')
+      initGitalk()
+    }
+  }
+  
+  const commentCount = n => {
+    const isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+    if (isCommentCount) {
+      isCommentCount.textContent= n
+    }
+  }
+
+  if ('Gitalk' === 'Gitalk' || !false) {
+    if (false) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+    else loadGitalk()
+  } else {
+    window.loadOtherComment = loadGitalk
+  }
+})()</script></div><script src="/js/F12.js"></script><link rel="stylesheet" href="/css/progress_bar.css" media="defer" onload="this.media='all'"><script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script><script async data-pjax src="/js/txmap.js"></script><script src="/js/custom.js"></script><script async src="//npm.elemecdn.com/pace-js@1.2.4/pace.min.js"></script><script async src="/js/title.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>(() => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => fn())
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      pjax.loadUrl('/404.html')
+    }
+  })
+})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

@@ -1,0 +1,468 @@
+/* 页脚与顶部图片透明 */
+#footer {
+  background: transparent !important;
+}
+#page-header {
+  background: transparent !important;
+}
+
+/* 白天模式遮罩透明 */
+#footer::before {
+  background: transparent !important;
+}
+#page-header::before {
+  background: transparent !important;
+}
+
+/* 夜间模式遮罩透明 */
+[data-theme="dark"] #footer::before {
+  background: transparent !important;
+}
+[data-theme="dark"] #page-header::before {
+  background: transparent !important;
+}
+
+/* 定义自定义字体 */
+@font-face {
+  font-family: 'wzz';	
+  src: url(/font/LXGWWenKai-Light.ttf)format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 应用自定义字体到全局 */
+body, h1, h2, h3, h4, h5, h6, p, span {
+  font-family: 'wzz', sans-serif !important;
+}
+
+/* 一级菜单居中 */
+#nav .menus_items {
+  position: absolute !important;
+  width: 510px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  color:rgba(255, 255, 255, 0.88);
+  display: inline;
+}
+
+
+
+/* 设置个人信息卡片背景图 */
+[data-theme="light"] #aside-content > .card-widget.card-info {
+  background-image: url('/img/auth-bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: inherit;
+  background-size: 100%;
+}
+[data-theme="dark"] #aside-content > .card-widget.card-info {
+  background-image: url('/img/auth-bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: inherit;
+  background-size: 100%;
+}
+
+/* 个人信息Follow me按钮 */
+#aside-content > .card-widget.card-info > #card-info-btn {
+  background-color: #3eb8be;
+  border-radius: 8px;
+}
+
+/* 定义全局变量 */
+:root {
+  --trans-light: rgba(255, 255, 255, 0.88);
+  --trans-dark: rgba(25, 25, 25, 0.88);
+  --border-style: 1px solid rgb(169, 169, 169);
+  --backdrop-filter: blur(5px) saturate(150%);
+}
+
+/* 首页文章卡片 */
+#recent-posts > .recent-post-item {
+  background: var(--trans-light);
+  backdrop-filter: var(--backdrop-filter);
+  border-radius: 25px;
+  border: var(--border-style);
+}
+
+
+/* 首页侧栏卡片 */
+#aside-content .card-widget {
+  background: var(--trans-light);
+  backdrop-filter: var(--backdrop-filter);
+  border-radius: 18px;
+  border: var(--border-style);
+}
+
+/* 文章页、归档页、普通页面 */
+div#post,
+div#page,
+div#archive {
+  background: var(--trans-light);
+  backdrop-filter: var(--backdrop-filter);
+  border: var(--border-style);
+  border-radius: 20px;
+}
+
+/* 首页全屏背景图 */
+#page-header {
+  position: relative;
+  height: 100vh !important;
+  background-attachment: fixed !important;
+  overflow: hidden;
+}
+
+/* 毛玻璃效果 */
+#page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+  filter: blur(10px);
+  transform: scale(1.1); /* 稍微放大以覆盖边缘 */
+  z-index: -1;
+}
+
+/* 添加一个半透明的遮罩层 */
+#page-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -1;
+}
+
+/* 确保内容在毛玻璃效果之上 */
+#page-header > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* 导航栏样式 */
+#nav {
+  position: fixed !important;
+  top: 10px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 50% !important;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+/* 确保导航栏在滚动时保持位置和样式 */
+#page-header.nav-fixed #nav,
+#page-header.nav-visible #nav {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 夜间模式下的导航栏式 */
+[data-theme="dark"] #nav,
+[data-theme="dark"] #page-header.nav-fixed #nav,
+[data-theme="dark"] #page-header.nav-visible #nav {
+  background: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* 其他导航栏相关样式保持不变 */
+
+/* 调整网站标题样式 */
+#site-title,
+#site-subtitle {
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+/* 确保导航栏在滚动时保持位置 */
+#page-header.nav-fixed #nav,
+#page-header.nav-visible #nav {
+  top: 20px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
+/* 导航栏文字样式 */
+#nav a,
+#nav #site-name,
+#nav #toggle-menu,
+#nav .site-page,
+#nav .menus_items .menus_item,
+#search-button {
+  color: rgba(255, 255, 255, 0.8) !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  transition: color 0.3s ease-in-out;
+  font-size: 0.9em !important;
+}
+
+/* 悬停效果 */
+#nav a:hover,
+#nav #site-name:hover,
+#nav #toggle-menu:hover,
+#nav .site-page:hover,
+#nav .menus_items .menus_item:hover,
+#search-button:hover {
+  color: #ffffff !important;
+}
+
+/* 子菜单样式 */
+#nav .menus_items .menus_item .menus_item_child {
+  position: absolute;
+  top: 100%;
+  left: 0; /* 将左边距设为0 */
+  transform: none; /* 移除水平居中的变换 */
+  min-width: 100%;
+  background-color: rgba(225, 225, 225, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin-top: 10px;
+  display: none;
+}
+
+#nav .menus_items .menus_item:hover .menus_item_child {
+  display: block;
+}
+
+#nav .menus_items .menus_item .menus_item_child li a {
+  color: rgba(255, 255, 255, 0.9) !important; /* 增加文字对比度 */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+#nav .menus_items .menus_item .menus_item_child li a:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+/* 子菜单横向展示 */
+#nav .menus_items .menus_item:hover .menus_item_child {
+  display: flex !important;
+}
+
+/* 调整特定子菜单的位置 */
+.menus_items .menus_item:nth-child(2) .menus_item_child {
+  left: 0;
+}
+/* 调整第三个菜单项（拾光）的子菜单位置 */
+.menus_items .menus_item:nth-child(3) .menus_item_child {
+  left: 0; /* 将第三个菜单项（拾光）的子菜单左对齐 */
+}
+
+/* 搜索按钮样式 */
+#nav #search-button {
+  padding: 0 10px;
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 768px) {
+  .nav-container {
+    width: 90%;
+    padding: 5px 10px;
+  }
+
+  #nav .menus_items {
+    justify-content: space-around;
+  }
+
+  #nav .menus_items .menus_item {
+    padding: 5px;
+  }
+}
+
+/* 确保内容不被导航栏遮挡 */
+#content-inner {
+  margin-top: 80px; /* 根据导航栏高度调整 */
+}
+
+/* 首页全屏背景图 */
+#page-header {
+  height: 100vh !important;
+  background-attachment: fixed !important;
+  position: relative;
+}
+
+.card-info-avatar .author-status-box {
+  position: absolute;
+  bottom: 0;
+  left: calc(100% - 28px);
+  width: 28px;
+  height: 28px;
+  border: 1px solid #d0d7de;
+  border-radius: 2em;
+  background-color: #f8f8f8f8;
+  transition: 0.4s;
+  overflow: hidden;
+}
+
+[data-theme="dark"] .card-info-avatar .author-status-box {
+  background-color: #222222f2;
+  border: 1px solid #5c6060;
+}
+
+.card-info-avatar .author-status-box .author-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  padding: 0 5px;
+}
+
+.card-info-avatar .author-status-box:hover {
+  width: 105px;
+}
+
+.card-info-avatar .author-status-box:hover .author-status span {
+  width: 105px;
+  margin-left: 4px;
+}
+
+.card-info-avatar .author-status-box .author-status span {
+  width: 0;
+  font-size: 12px;
+  height: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: 0.4s;
+}
+
+.card-widget .card-info-avatar {
+  display: inline-block;
+  position: relative;
+}
+
+/* 个人信息卡片样式 */
+#aside-content .card-info {
+  position: relative;
+  overflow: hidden;
+}
+
+/* 白天模式下的渐变蒙版 */
+[data-theme="light"] #aside-content .card-info::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, 
+              rgba(255,255,255,0) 0%,
+              rgba(255,255,255,0.3) 30%,
+              rgba(255,255,255,0.6) 60%,
+              rgba(255,255,255,0.9) 100%);
+  pointer-events: none;
+}
+
+/* 夜间模式下的渐变蒙版 */
+[data-theme="dark"] #aside-content .card-info::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, 
+              rgba(0,0,0,0) 0%,
+              rgba(0,0,0,0.3) 30%,
+              rgba(0,0,0,0.6) 60%,
+              rgba(0,0,0,0.9) 100%);
+  pointer-events: none;
+}
+
+/* 确保卡片内容在蒙版之上 */
+#aside-content .card-info > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* 调整卡片内容的颜色，确保在蒙版上可见 */
+[data-theme="light"] #aside-content .card-info {
+  color: #333;
+}
+
+[data-theme="dark"] #aside-content .card-info {
+  color: #fff;
+}
+
+/* 夜间模式下的导航栏样式（如果需要） */
+[data-theme="dark"] #nav,
+[data-theme="dark"] #page-header.nav-fixed #nav,
+[data-theme="dark"] #page-header.nav-visible #nav {
+  background: rgba(0, 0, 0, 0.7) !important; /* 或者您想要的夜间模式颜色 */
+}
+
+#scroll-down {
+  cursor: pointer;
+  transition: all 0.3s ease !important;
+}
+
+#scroll-down:hover {
+  transform: translateY(5px) !important;
+}
+
+/* 关于我页面样式 */
+body.about #aside-content {
+  display: none;
+}
+
+body.about #recent-posts,
+body.about .pagination,
+body.about #post {
+  width: 100% !important;
+}
+
+#about-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about-page-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.about-page-content {
+  line-height: 1.6;
+}
+
+.about-intro {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+.about-intro h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #49b1f5;
+}
+
+.about-intro p {
+  font-size: 1.2em;
+  color: #99a9bf;
+}
+
+#about-page .about-page-header {
+  margin-bottom: 20px;
+}
+
+#about-page .about-page-content {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 15px;
+}
