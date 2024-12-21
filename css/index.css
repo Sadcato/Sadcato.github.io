@@ -1346,8 +1346,8 @@ canvas:not(#ribbon-canvas),
   --global-font-size: 16px;
   --global-bg: #fff;
   --font-color: #4c4948;
-  --hr-border: #a4d8fa;
-  --hr-before-color: #80c8f8;
+  --hr-border: #B88A66;
+  --hr-before-color: #B88A66;
   --search-bg: #f6f8fa;
   --search-input-color: #4c4948;
   --search-a-color: #4c4948;
@@ -1364,8 +1364,8 @@ canvas:not(#ribbon-canvas),
   --sidebar-menu-bg: #fff;
   --btn-hover-color: #ff7242;
   --btn-color: #fff;
-  --btn-bg: #49b1f5;
-  --text-bg-hover: rgba(73,177,245,0.7);
+  --btn-bg: #B88A66;
+  --text-bg-hover: #B88A66;
   --light-grey: #eee;
   --dark-grey: #cacaca;
   --white: #fff;
@@ -1378,8 +1378,8 @@ canvas:not(#ribbon-canvas),
   --card-hover-box-shadow: 0 3px 8px 6px rgba(7,17,27,0.09);
   --pseudo-hover: #ff7242;
   --headline-presudo: #a0a0a0;
-  --scrollbar-color: #49b1f5;
-  --default-bg-color: #49b1f5;
+  --scrollbar-color: #B88A66;
+  --default-bg-color: #B88A66;
   --zoom-bg: #fff;
   --mark-bg: rgba(0,0,0,0.3);
 }
@@ -1489,7 +1489,7 @@ table td {
   vertical-align: middle;
 }
 *::selection {
-  background: #00c4b6;
+  background: #B88A66;
   color: #f7f7f7;
 }
 button {
@@ -4254,7 +4254,7 @@ figure.highlight pre .javascript .function {
   text-align: center;
 }
 #pagination .page-number.current {
-  background: #00c4b6;
+  background: #B88A66;
   color: var(--white);
 }
 #pagination .pagination-info {
@@ -4785,7 +4785,7 @@ figure.highlight pre .javascript .function {
   margin-bottom: 5px;
   width: 35px;
   height: 35px;
-  background-color: var(--btn-bg);
+  background-color: #B88A66;
   color: var(--btn-color);
   text-align: center;
   font-size: 16px;
