@@ -4254,7 +4254,7 @@ figure.highlight pre .javascript .function {
   text-align: center;
 }
 #pagination .page-number.current {
-  background: #B88A66;
+  background: var(--hr-before-color);
   color: var(--white);
 }
 #pagination .pagination-info {
@@ -4785,7 +4785,7 @@ figure.highlight pre .javascript .function {
   margin-bottom: 5px;
   width: 35px;
   height: 35px;
-  background-color: #B88A66;
+  background-color: var(--hr-before-color);
   color: var(--btn-color);
   text-align: center;
   font-size: 16px;
